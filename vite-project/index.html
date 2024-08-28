@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="min-h-screen flex justify-center flex-row bg-gray-600 gap-9">
+      <div class=" min-h-100 flex items-center" >
+        <form class="flex flex-col bg-blue-100 px-5 py-3 gap-4 h-4/6 rounded" id="formulario">
+          <label for="title">Titulo:</label>
+          <input type="text" id="input-title" name="title" required />
+
+          <label for="descripcion">Descripcion:</label>
+          <textarea
+            type="text"
+            id="input-description"
+            name="descripcion"
+            required
+          ></textarea>
+
+          <section>
+            <label for="checkbox">Este campo es obligatorio</label>
+            <input
+              type="checkbox"
+              id="input-checkbox"
+              name="checkbox"
+              required
+            />
+          </section>
+
+          <button type="submit">Subir</button>
+        </form>
+      </div>
+      <div class="respuesta" id="app"></div>
+    </div>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
