@@ -2,14 +2,16 @@ import { deleteTask, putTask } from "./controllers.js";
 
 export const renderTask = (task) => {
   const $taskContainer = document.createElement("div");
-  $taskContainer.classList.add("task-item");
+  $taskContainer.classList.add("task-item", "border", "border-solid", "border-black", "rounded", "p-3", "h-auto");
 
   const taskTitle = document.createElement("p");
   const $taskDescription = document.createElement("p");
   const $taskIsCompleted = document.createElement("input");
   const $taskDelete = document.createElement("button");
 
-  taskTitle.classList.add("task-title");
+  $taskDelete.classList.add("ml-2", "border", "border-solid", "border-black", "border-solid", "p-1", "rounded", "bg-blue-950", "text-white", "font-semibold", "h-10")
+
+  taskTitle.classList.add("task-title", "font-bold", "text-red-900", "mb-1");
   taskTitle.textContent = task.title;
 
   if (task.isComplete) {
@@ -18,7 +20,7 @@ export const renderTask = (task) => {
 
   $taskContainer.appendChild(taskTitle);
 
-  $taskDescription.classList.add("task-description");
+  $taskDescription.classList.add("task-description", "font-semibold", "pb-1");
   $taskDescription.textContent = task.description;
 
   if (task.isComplete) {

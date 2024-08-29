@@ -7,35 +7,46 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div class="min-h-screen flex justify-center flex-row bg-gray-600 gap-9">
-      <div class=" min-h-100 flex items-center" >
-        <form class="flex flex-col bg-blue-100 px-5 py-3 gap-4 h-4/6 rounded" id="formulario">
-          <label for="title">Titulo:</label>
-          <input type="text" id="input-title" name="title" required />
-
-          <label for="descripcion">Descripcion:</label>
+    <div class="flex justify-evenly min-h-screen items-center bg-gray-950 p-4">
+      <div class=" min-h-94 rounded flex flex-row bg-white">
+        <img class="h-auto w-96 rounded-l-sm" src="src/img/paisa.jpg" alt="">
+        <form class="flex flex-col content-center p-6 gap-3 rounded-m" id="formulario">
+          <label class="font-bold text-blue-900" for="title">Titulo:</label>
+          <input class="rounded border border-solid p-1 border-black" type="text" id="input-title" name="title" required />
+  
+          <label class="font-bold text-blue-900" for="descripcion">Descripcion:</label>
           <textarea
+            class="rounded border border-solid p-2 border-black"
             type="text"
             id="input-description"
             name="descripcion"
             required
           ></textarea>
-
-          <section>
-            <label for="checkbox">Este campo es obligatorio</label>
+  
+          <section class="">
             <input
               type="checkbox"
               id="input-checkbox"
               name="checkbox"
               required
             />
+            <label class="text-gray-900 font-bold" for="checkbox">Este campo es obligatorio</label>
           </section>
-
-          <button type="submit">Subir</button>
+          <button class="bg-blue-900 rounded text-white font-semibold h-10 hover:bg-blue-800 hover:transition
+          hover:text-blue-100 m-4" type="submit">Subir</button>
         </form>
       </div>
-      <div class="respuesta" id="app"></div>
+
+      <section class="bg-white p-6 w-80 h-auto rounded">
+        <P class="text-center font-bold text-blue-900 pb-4">TASKS</P>
+        <div class="flex flex-col gap-4 h-auto" id="app"></div>
+      </section>
     </div>
+
+
+
+
+
     <script type="module" src="src/main.js"></script>
   </body>
 </html>
