@@ -20,7 +20,7 @@ export const renderTask = (task) => {
 
   $taskContainer.appendChild(taskTitle);
 
-  $taskDescription.classList.add("task-description", "font-semibold", "pb-1");
+  $taskDescription.classList.add("task-description", "font-semibold", "pb-1", "truncate");
   $taskDescription.textContent = task.description;
 
   if (task.isComplete) {
