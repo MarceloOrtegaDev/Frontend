@@ -13,8 +13,8 @@ $formulario.addEventListener("submit", (event) => {
   const $isComplete = document.getElementById("input-checkbox");
 
   const nuevasTareas = {
-    title: $title.value,
-    description: $description.value,
+    title: $title.value.trim(),
+    description: $description.value.trim(),
     isComplete: $isComplete.checked,
   };
 

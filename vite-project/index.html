@@ -7,15 +7,15 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div class="flex justify-center min-h-screen items-center bg-gray-700 p-3 sm:flex-col md:flex-col flex-col lg:flex-row sm:gap-16 gap-6 min-w-96">
-      <div class=" min-h-94 rounded flex flex-col bg-white sm:flex-col md:flex-col lg:flex-row">
+    <div class="flex justify-center min-h-screen items-center lg:items-start md:items-center sm:items-center bg-gray-700 p-3 sm:flex-col md:flex-col flex-col lg:flex-row sm:gap-16 gap-6 min-w-96">
+      <div class=" min-h-94 rounded flex flex-col bg-white sm:flex-col md:flex-col lg:flex-row mt-40">
         <img class="h-auto max-w-96 rounded-l-sm" src="src/img/paisa.jpg" alt="">
         <form class="flex flex-col content-center p-6 gap-3 rounded-m" id="formulario">
           <label class="font-bold text-blue-900" for="title">Titulo:</label>
           <input class="rounded border border-solid p-1 border-black" type="text" id="input-title" name="title" required />
   
           <label class="font-bold text-blue-900" for="descripcion">Descripcion:</label>
-          <textarea
+          <textarea 
             class="rounded border border-solid p-2 border-black"
             type="text"
             id="input-description"
@@ -28,7 +28,6 @@
               type="checkbox"
               id="input-checkbox"
               name="checkbox"
-              required
             />
             <label class="text-gray-900 font-bold" for="checkbox">Este campo es obligatorio</label>
           </section>
@@ -41,6 +40,32 @@
         <P class="text-center font-bold text-blue-900 pb-4">TASKS</P>
         <div class="flex flex-col gap-4 h-auto" id="app"></div>
       </section>
+    </div>
+
+    <div id="edit-modal" class="hidden fixed inset-0 bg-gray-500 bg-opacity-60 flex items-center justify-center">
+      <div class="bg-white p-6 rounded shadow-lg">
+        <h2 class="text-xl font-bold mb-4">Editar Tarea</h2>
+        <form id="edit-form">
+          <label class="font-bold text-blue-900" for="edit-title">Título:</label>
+          <input class="rounded border border-solid p-1 border-black w-full mb-3" type="text" id="edit-title" name="title"
+            required />
+    
+          <label class="font-bold text-blue-900" for="edit-description">Descripción:</label>
+          <textarea class="rounded border border-solid p-2 border-black w-full mb-3" id="edit-description"
+            name="description" required></textarea>
+    
+          <section class="mb-3">
+            <input type="checkbox" id="edit-checkbox" name="checkbox" />
+            <label class="text-gray-900 font-bold" for="edit-checkbox">¿Completado?</label>
+          </section>
+    
+          <button
+            class="bg-blue-900 rounded text-white font-semibold h-10 hover:bg-blue-800 hover:transition hover:text-blue-100 w-full mb-2"
+            type="submit">Guardar Cambios</button>
+          <button id="close-modal"
+            class="bg-red-600 rounded text-white font-semibold h-10 hover:bg-red-500 hover:transition hover:text-red-100 w-full">Cancelar</button>
+        </form>
+      </div>
     </div>
 
 
